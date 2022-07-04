@@ -8,10 +8,14 @@ import lonjaApp.apoyo.*;
 public class TestearLonja {
 
 	public static void main(String[] args) {
+		
 		new TestearLonja();
+		
+	/*	Por si quieres instanciarlo
 	}
-	
 	private TestearLonja() {
+	*/
+		//		crear lo necesario para trabajar
 		Lonja l1 = new Lonja();
 		l1.pintar();
 		
@@ -21,31 +25,27 @@ public class TestearLonja {
 		
 		do {
 			ahora = vamos.charAt(momento);
+			//	switch es un if -> else para varios valores
 			switch (ahora) {
 			case 'C': {
 		// LLegan los barcos con cajas de pescado
 				l1.cargar();
-				l1.pintar();
 				break;
 			}
 			case 'L': {
 				l1.limpiar();
-				l1.pintar();
 				break;
 			}
 			case 'P': {
 				l1.pesar();
-				l1.pintar();
 				break;
 			}
 			case 'V': {
 				l1.valorar();
-				l1.pintar();
 				break;
 			}
 			case 'F': {
 				l1.vaciar();
-				l1.pintar();
 				break;
 			}
 			default:
