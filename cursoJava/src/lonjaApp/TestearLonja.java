@@ -9,7 +9,7 @@ public class TestearLonja {
 
 	public static void main(String[] args) {
 		
-		new TestearLonja();
+		//new TestearLonja();
 		
 	/*	Por si quieres instanciarlo
 	}
