@@ -75,6 +75,11 @@ public class Probando {
 			}
 		}.pintar();
 
+		ClaseFinal cf = new ClaseFinal();
+		cf.setColor("Violeta");
+		System.out.println(cf);
+		
+		
 	}
 
 }

@@ -1,4 +1,4 @@
-package lonjaApp.apoyo;
+package lonjaApp.especificaciones;
 
 public interface ICajaRefrigerados {
 
