@@ -1,6 +1,5 @@
 package lonjaApp;
 
-import lonjaApp.*;
 import lonjaApp.apoyo.*;
 
 //import lonja.apoyo.Lonja;
@@ -19,12 +18,11 @@ public class TestearLonja {
 		Lonja l1 = new Lonja();
 		l1.pintar();
 		
-		String vamos ="CLPVF";
+		String vamos ="CLPVFCLF";
 		int momento = 0;
-		char ahora;
 		
 		do {
-			ahora = vamos.charAt(momento);
+			char ahora = vamos.charAt(momento);
 			//	switch es un if -> else para varios valores
 			switch (ahora) {
 			case 'C': {
@@ -52,7 +50,7 @@ public class TestearLonja {
 				throw new IllegalArgumentException("No se que quieres hacer: " + ahora);
 			}
 			momento++;
-		} while ( (ahora != 'F') && (momento < vamos.length()) );
+		} while ( momento < vamos.length() );
 
 		System.out.println("Hemos terminado");
 	}
