@@ -1,10 +1,14 @@
 package lonjaApp.apoyo;
 
+import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 import lonjaApp.especificaciones.*;
 
 public class Lonja implements ILonja {
+
+	List<ICajaRefrigerados> cajas = new ArrayList<ICajaRefrigerados>();
 
 //		Testeamos
 	@Override
@@ -66,7 +70,6 @@ public class Lonja implements ILonja {
 	}
 
 
-
 	public void vaciar() {
 		System.out.println("Vaciando...");
 		pintar();
@@ -80,6 +83,9 @@ public class Lonja implements ILonja {
 
 	@Override
 	public String toString() {
+		for (ICajaRefrigerados iCajaRefrigerados : cajas) {
+			System.out.println(iCajaRefrigerados);
+		}
 		return "Soy una lonja";
 	}
 

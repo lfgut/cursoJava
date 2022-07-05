@@ -55,13 +55,11 @@ public class CajaMerluza extends CajaFrutaDiMare
 
 	@Override
 	public String toString() {
-		
-		
-		return "CajaMerluza [tieneAlgas=" + tieneAlgas + ", unidades=" + unidades + ", valor=" + valor
-				+ ", estaValorada()=" + estaValorada() + ", estaLimpia()=" + estaLimpia() + "]";
-		
+		StringBuilder sb = new StringBuilder("Caja de merluza");
+		sb.append("\n\t" + (tieneAlgas?"Si":"No") + " tiene algas");
+		sb.append("\n\tUnidades: " + unidades );
+		if (estaValorada) sb.append("Valorada en: " + valor);
+		return sb.toString();	
 	}
-	
-	
 
 }

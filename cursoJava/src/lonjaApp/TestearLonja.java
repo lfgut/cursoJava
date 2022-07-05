@@ -44,6 +44,7 @@ public class TestearLonja {
 			// LLegan los barcos con cajas de pescado
 			case 'm': {
 				l1.cargar( new CajaMerluza() );
+				System.out.println("otra caja de merluza");
 				break;
 			}
 			case 'g': {
