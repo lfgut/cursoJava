@@ -1,3 +1,8 @@
 Complemento para eclipse en español:
 
 https://www.programaenlinea.net/cambiar-idioma-eclipse-espanol-primera-parte/#:~:text=El%20primer%20paso%20para%20cambiar,ver%20en%20la%20Imagen%20%231
+
+
+Sobre clases anónimas
+
+https://es.stackoverflow.com/questions/42911/cu%C3%A1l-es-el-prop%C3%B3sito-de-las-clases-an%C3%B3nimas-en-java
