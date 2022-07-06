@@ -18,7 +18,7 @@ public class TestearLonja {
 		Lonja l1 = new Lonja();
 		l1.pintar();
 		
-		String vamos ="gmpaLPVFLF";
+		String vamos ="g";
 		int momento = 0;
 		
 		do {

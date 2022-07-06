@@ -6,11 +6,20 @@ import lonjaApp.especificaciones.*;
 
 public class CajaMerluza extends CajaFrutaDiMare
 	implements IEstarSucia, IValorable {
-
+	
+	final static int UNIDADES_MIN = 8;
+	final static int UNIDADES_MAX = 12;
+	
+	final static float PRECIO_MIN = 6;
+	final static float PRECIO_MAX = 11;
+	
 	//	Se valora por unidades
 	//  en cada caja vienen entre 8 y 12
 	private boolean tieneAlgas = true;
-	private int unidades = new Random().nextInt(4)+8;
+	private int unidades =
+			new Random()
+			.nextInt(UNIDADES_MAX-UNIDADES_MIN)
+			+UNIDADES_MIN;
 	
 	private boolean estaValorada = false;
 	private float valor = 0;
@@ -28,8 +37,9 @@ public class CajaMerluza extends CajaFrutaDiMare
 	public float valorar() {
 		if (!estaValorada()) {
 			estaValorada = true;
-			//	calculamos precio por unidad 6 - <11
-			valor = unidades * (new Random()).nextFloat(5)+6;
+			//	calculamos precio por unidad
+			valor = unidades * (new Random())
+					.nextFloat(PRECIO_MAX-PRECIO_MIN)+PRECIO_MIN;
 		}
 		return valor;
 	}

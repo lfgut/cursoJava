@@ -27,9 +27,25 @@ public class Lonja implements ILonja {
 	}
 
 
-
 	public void limpiar() {
-		System.out.println("Limpiando...");
+		
+		for (ICajaRefrigerados caja : cajas) 
+			if (caja instanceof IEstarSucia)
+				((IEstarSucia) caja).limpiar();
+		
+		/*
+		{
+			if (caja instanceof CajaMerluza) {
+				//	Casting
+				CajaMerluza cm = (CajaMerluza) caja;
+				cm.limpiar();
+			} else if (caja instanceof CajaGamba) {
+				((CajaGamba) caja).limpiar();
+			}
+		}
+		*/
+		
+		
 		pintar();
 	}
 
