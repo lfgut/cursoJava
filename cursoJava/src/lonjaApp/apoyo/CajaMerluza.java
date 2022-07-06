@@ -28,7 +28,7 @@ public class CajaMerluza extends CajaFrutaDiMare
 	public float valorar() {
 		if (!estaValorada()) {
 			estaValorada = true;
-			//	calculamos precio por unidad
+			//	calculamos precio por unidad 6 - <11
 			valor = unidades * (new Random()).nextFloat(5)+6;
 		}
 		return valor;
@@ -55,8 +55,8 @@ public class CajaMerluza extends CajaFrutaDiMare
 
 	@Override
 	public String toString() {
-		StringBuilder sb = new StringBuilder("Caja de merluza");
-		sb.append("\n\t" + (tieneAlgas?"Si":"No") + " tiene algas");
+		StringBuilder sb = new StringBuilder("\nCaja de merluza");
+		sb.append("\n\t" + (tieneAlgas?"Sí":"No") + " tiene algas");
 		sb.append("\n\tUnidades: " + unidades );
 		if (estaValorada) sb.append("Valorada en: " + valor);
 		return sb.toString();	

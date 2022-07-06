@@ -8,14 +8,14 @@ import lonjaApp.especificaciones.*;
 
 public class Lonja implements ILonja {
 
-	List<ICajaRefrigerados> cajas = new ArrayList<ICajaRefrigerados>();
+	List<ICajaRefrigerados> cajas =
+			new ArrayList<ICajaRefrigerados>();
+	
 
 //		Testeamos
 	@Override
 	public void cargar( ICajaRefrigerados caja) {
-		System.out.println("Cargando...");
-
-		//CajaFrutaDiMare fm = new CajaFrutaDiMare();
+		cajas.add(caja);
 	}
 	
 
@@ -83,10 +83,11 @@ public class Lonja implements ILonja {
 
 	@Override
 	public String toString() {
-		for (ICajaRefrigerados iCajaRefrigerados : cajas) {
-			System.out.println(iCajaRefrigerados);
+		StringBuilder st = new StringBuilder();
+		for (ICajaRefrigerados caja  : cajas) {
+			st.append( caja );
 		}
-		return "Soy una lonja";
+		return "Soy una lonja, y tengo " + st;
 	}
 
 }
