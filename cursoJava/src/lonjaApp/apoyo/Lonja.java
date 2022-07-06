@@ -6,6 +6,9 @@ import lonjaApp.especificaciones.*;
 
 public class Lonja implements ILonja, IEstarSucia, IPesable{
 
+	
+	private static Lonja lonja;
+	
 	List<ICajaRefrigerados> cajas =
 			new ArrayList<ICajaRefrigerados>();
 	
@@ -18,7 +21,16 @@ public class Lonja implements ILonja, IEstarSucia, IPesable{
 	private final static int CAPACIDAD_MAX = 3;
 	
 
-//		Testeamos
+	public static Lonja dameUnaLonja() {
+		if (lonja == null ) lonja = new Lonja();
+		return lonja;
+	}
+
+	private Lonja() {
+		super();
+	}
+
+	//		Testeamos
 	@Override
 	public void cargar( ICajaRefrigerados caja) {
 		if (!estaLlena) {

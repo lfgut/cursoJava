@@ -15,7 +15,7 @@ public class TestearLonja {
 	private TestearLonja() {
 	*/
 		//		crear lo necesario para trabajar
-		Lonja l1 = new Lonja();
+		Lonja l1 = Lonja.dameUnaLonja();
 	
 		String vamos ="ggVFmL";
 		int momento = 0;
