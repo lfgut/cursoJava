@@ -16,9 +16,8 @@ public class TestearLonja {
 	*/
 		//		crear lo necesario para trabajar
 		Lonja l1 = new Lonja();
-		l1.pintar();
-		
-		String vamos ="g";
+	
+		String vamos ="ggVFmL";
 		int momento = 0;
 		
 		do {
@@ -73,6 +72,7 @@ public class TestearLonja {
 			default:
 				throw new IllegalArgumentException("No se que quieres hacer: " + ahora);
 			}
+			l1.pintar();
 			momento++;
 		} while ( momento < vamos.length() );
 

@@ -9,6 +9,14 @@ import lonjaApp.especificaciones.IValorable;
 public class CajaGamba extends CajaFrutaDiMare
 	implements IEstarSucia, IPesable, IValorable {
 	
+	final static float PESO_MIN = 14;
+	final static float PESO_MAX = 16;
+	
+	final static float PRECIO_MIN = 6;
+	final static float PRECIO_MAX = 11;
+	
+	
+	
 	private boolean tieneAlgas = true;
 	private boolean tieneArena = true;
 	
@@ -26,7 +34,8 @@ public class CajaGamba extends CajaFrutaDiMare
 
 	@Override
 	public float pesar() {
-		if (!estaPesada) peso = (new Random()).nextFloat(2)+4;
+		if (!estaPesada) peso = (new Random())
+				.nextFloat(PESO_MAX-PESO_MIN)+PESO_MIN;
 		return peso;
 	}
 
@@ -47,7 +56,8 @@ public class CajaGamba extends CajaFrutaDiMare
 		if (estaPesada && !estaValorada) {
 			estaValorada = true;
 			//	calculamos precio por peso
-			precioKilo = (new Random()).nextFloat(12)+14;
+			precioKilo = (new Random())
+					.nextFloat(PRECIO_MAX-PESO_MIN)+PESO_MIN;
 			valor = peso * precioKilo;
 		}
 		return valor;
@@ -55,8 +65,7 @@ public class CajaGamba extends CajaFrutaDiMare
 
 	@Override
 	public boolean estaValorada() {
-		// TODO Auto-generated method stub
-		return false;
+		return estaValorada;
 	}
 
 	@Override
