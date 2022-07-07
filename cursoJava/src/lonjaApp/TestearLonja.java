@@ -17,7 +17,7 @@ public class TestearLonja {
 		//		crear lo necesario para trabajar
 		Lonja l1 = Lonja.dameAccesoALaUnicaLonjaQueVamosATener();
 	
-		String vamos ="ggVFmL";
+		String vamos ="ggpLVFmL";
 		int momento = 0;
 		
 		do {
