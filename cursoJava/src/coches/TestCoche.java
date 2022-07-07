@@ -56,7 +56,12 @@ public class TestCoche {
 		System.out.println( "Tenemos " + conTexto.texto );
 		// no se puede
 		// conTexto.texto = "Otro valor";
+		
+		// SI podemos acceder desde la Clase (en este caso la Inteface)
 		System.out.println(	ILavable.texto );
+		
+		// NO es modificable porque es final
+		// ILavable.texto = "Otra cosa";
 		
 		
 		
