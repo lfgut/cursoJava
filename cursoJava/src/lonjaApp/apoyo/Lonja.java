@@ -21,7 +21,7 @@ public class Lonja implements ILonja, IEstarSucia, IPesable{
 	private final static int CAPACIDAD_MAX = 3;
 	
 
-	public static Lonja dameUnaLonja() {
+	public static Lonja dameAccesoALaUnicaLonjaQueVamosATener() {
 		if (lonja == null ) lonja = new Lonja();
 		return lonja;
 	}
@@ -52,8 +52,15 @@ public class Lonja implements ILonja, IEstarSucia, IPesable{
 			System.out.println("Estamos limpiando la lonja");
 			estaSucia = false;
 			for (ICajaRefrigerados caja : cajas) 
-				if (caja instanceof IEstarSucia)
+				if (caja instanceof IEstarSucia) 
+					//IEstarSucia es = (IEstarSucia)caja;
+					//	hacemos casting -> cast: usar un objeto como algo más concreto que SI sabemos que es
+					//  poneer un CAST es bajo la responsabilidad del desarrollador
+					// objeto anónimo:
 					((IEstarSucia) caja).limpiar();
+					
+					// la caja no se puede limpiar DIRECTAMENTE
+					//caja.limpiar();
 		}
 		/*
 		{
