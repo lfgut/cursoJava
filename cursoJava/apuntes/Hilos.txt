@@ -29,6 +29,11 @@ Conceptos:
  Clase implemeta Runnable, escribimos run(), se la pasamos a un Thread y la ejecutamos con .start
   
  
+ Thread pone ne marcha todo el mecanismo de hilos
+ En el método run() es donde escribimos lo que queremos hacer
+ Y lo ejecutamos con start()
+ start() termina por llamar al método run() como un hilo
+ 
  
  
  
