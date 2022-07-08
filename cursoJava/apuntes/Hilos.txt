@@ -49,6 +49,9 @@ Conceptos:
  -> deben implementar la interface Runnable ->>
  ->> les obliga a escribir un método run()
  
+ Los coches se van a poder llamar con 
+ 
+ new Thread(coche1).start();
  
  
  
