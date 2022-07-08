@@ -1,6 +1,6 @@
 package carrerasdecoches.apoyo;
 
-public class CocheThread extends Thread {
+public class CocheThread extends CocheConMaletero implements Runnable {
 
 	int lentitud = 10;
 	
@@ -34,6 +34,24 @@ public class CocheThread extends Thread {
 		// La i no es accesible fuera del bucle
 		//System.out.println("Estoy fuera del bucle " + i);
 	}
+
+	public void pinta() {
+		System.out.println( this );
+	}
+	
+	
+	@Override
+	public String toString() {
+		StringBuilder st = new StringBuilder("\nN " + getName());
+		st.append( "\nI " + getId() ) ;
+		st.append( "\nS " + getState() );
+		st.append( "\nP " + getPriority() );
+		st.append( "\nG " + getThreadGroup() );
+		st.append( "\ns " + interrupted() );
+		return  st.toString();
+	}
+	
+	
 
 	
 

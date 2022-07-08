@@ -35,6 +35,23 @@ Conceptos:
  start() termina por llamar al método run() como un hilo
  
  
+ ---------------------------------------------------
+ 
+ 
+ Ejercicio:
+ 
+ Queremos usar coches con maletero para la carrera
+ 
+ - pistas:
+ 
+ Los coches deben extender de "CochesConMaletero"
+ -> No pueden extender de Thread
+ -> deben implementar la interface Runnable ->>
+ ->> les obliga a escribir un método run()
+ 
+ 
+ 
+ 
  
  
  
