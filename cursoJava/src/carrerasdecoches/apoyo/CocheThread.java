@@ -1,6 +1,6 @@
 package carrerasdecoches.apoyo;
 
-public class CocheThread extends CocheConMaletero implements Runnable {
+public class CocheThread extends Thread {
 
 	int lentitud = 10;
 	
@@ -26,7 +26,6 @@ public class CocheThread extends CocheConMaletero implements Runnable {
 				} catch (InterruptedException e) {
 					e.printStackTrace();
 				}
-				
 				
 			//	En alguna parte del bucle se pasa el control al otro hilo
 		}

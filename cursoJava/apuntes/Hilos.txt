@@ -25,9 +25,13 @@ Conceptos:
  Runnable (Interface)
  
  
- Clase extiende de Thread, sobreescribimos el método run() y ejecutamos .start()
- Clase implemeta Runnable, escribimos run(), se la pasamos a un Thread y la ejecutamos con .start
-  
+ Clase extiende de Thread, sobreescribimos el método run() y ejecutamos .start() desde el Thread
+ Clase implementa Runnable, escribimos run(), se la pasamos a un Thread y la ejecutamos con .start
+ 
+ 
+ En ambos casos escribimos lo que queremos hacer en run()
+ 
+ 
  
  Thread pone ne marcha todo el mecanismo de hilos
  En el método run() es donde escribimos lo que queremos hacer
