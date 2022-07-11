@@ -1,14 +1,14 @@
 package carrerasdecoches.apoyo;
 
 public abstract class CocheConMaletero  {
-	private String maletero;
+	private Maleta maleta;
 	
-	private String getMaletero() {
-		return maletero;
+	public Maleta getMaleta() {
+		return maleta;
 	}
 
-	private void setMaletero(String maletero) {
-		this.maletero = maletero;
+	public void setMaleta(Maleta maleta) {
+		this.maleta = maleta;
 	}
 
 

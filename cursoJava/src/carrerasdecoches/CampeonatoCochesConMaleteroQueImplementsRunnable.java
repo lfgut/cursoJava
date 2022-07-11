@@ -6,9 +6,7 @@ import carrerasdecoches.apoyo.*;
 
 public class CampeonatoCochesConMaleteroQueImplementsRunnable {
 
-	private static Random random = new Random();
-	private static final int LENTITUD_MIN = 15;
-	private static final int LENTITUD_MAX = 20;
+
 	
 	public static void main(String[] args) {
 		
@@ -18,9 +16,13 @@ public class CampeonatoCochesConMaleteroQueImplementsRunnable {
 		
 		System.out.println("Va a empezar la carrera");
 	
-		parrilla.add( new CocheConMaleteroRunnable("Alonso T"  , dameLentidud() ) );
-		parrilla.add( new CocheConMaleteroRunnable("Sainz T"   , dameLentidud() ) );
-		parrilla.add( new CocheConMaleteroRunnable("Hamilton T", dameLentidud() ) );
+		parrilla.add( new CocheConMaleteroRunnable("Alonso T"  , new Maleta("Pequeña") {
+			public void hacerCalceta() {
+				System.out.println("Estoy haciendo calceta ");
+				}
+			}));
+		parrilla.add( new CocheConMaleteroRunnable("Sainz T"   , new Maleta("Mediana") {} ) );
+		parrilla.add( new CocheConMaleteroRunnable("Hamilton T", new Maleta("Grande") {} ) );
 		
 		for (CocheConMaleteroRunnable c : parrilla) c.pinta();
 		
@@ -71,9 +73,7 @@ public class CampeonatoCochesConMaleteroQueImplementsRunnable {
 
 	}
 	
-	private static int dameLentidud() {
-		return random.nextInt(LENTITUD_MAX-LENTITUD_MIN) + LENTITUD_MIN;
-	}
+
 
 	
 	//	 No es la mejor manera

@@ -1,14 +1,20 @@
 package carrerasdecoches.apoyo;
 
+import java.util.Random;
+
 public class CocheConMaleteroRunnable extends CocheConMaletero implements Runnable {
 
-	private int lentitud = 10;
+	private static Random random = new Random( System.currentTimeMillis() );
+	private static final int LENTITUD_MIN = 10;
+	private static final int LENTITUD_MAX = 30;
+
+	private Maleta maleta;
 	private String nombre;
 	
-	public CocheConMaleteroRunnable(String nombre, int lentitud) {
+	public CocheConMaleteroRunnable(String nombre, Maleta maleta) {
 		super();
 		this.setNombre(nombre);
-		this.lentitud = lentitud;
+		this.maleta = maleta;
 	}
 
 	@Override
@@ -18,15 +24,18 @@ public class CocheConMaleteroRunnable extends CocheConMaletero implements Runnab
 		//int a=0, b=2, c=3;
 		
 		for ( int i=0; i<=100 ; i++ ) {
-			System.out.println( lentitud + " Soy " + this.getNombre()
-				+ " y estoy en la vuelta " + i);
 			
+			int lentitud = dameLentidud();
+			
+			System.out.println( lentitud + " Soy " + this.getNombre()
+				+ " y tengo en mi maleta +" + getMaleta()
+				+ " y estoy en la vuelta " + i);
 			
 				Thread t = Thread.currentThread();
 				t.yield();
 				
 				try {
-					t.sleep(lentitud);
+					t.sleep( lentitud );
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -37,6 +46,7 @@ public class CocheConMaleteroRunnable extends CocheConMaletero implements Runnab
 		// La i no es accesible fuera del bucle
 		//System.out.println("Estoy fuera del bucle " + i);
 	}
+
 
 	public void pinta() {
 		System.out.println( this );
@@ -63,7 +73,9 @@ public class CocheConMaleteroRunnable extends CocheConMaletero implements Runnab
 	}
 	
 	
-
+	private static int dameLentidud() {
+		return random.nextInt(LENTITUD_MAX-LENTITUD_MIN) + LENTITUD_MIN;
+	}
 	
 
 }
