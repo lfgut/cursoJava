@@ -8,13 +8,12 @@ public class CocheConMaleteroRunnable extends CocheConMaletero implements Runnab
 	private static final int LENTITUD_MIN = 10;
 	private static final int LENTITUD_MAX = 30;
 
-	private Maleta maleta;
 	private String nombre;
 	
 	public CocheConMaleteroRunnable(String nombre, Maleta maleta) {
 		super();
 		this.setNombre(nombre);
-		this.maleta = maleta;
+		this.setMaleta( maleta );
 	}
 
 	@Override
@@ -28,7 +27,7 @@ public class CocheConMaleteroRunnable extends CocheConMaletero implements Runnab
 			int lentitud = dameLentidud();
 			
 			System.out.println( lentitud + " Soy " + this.getNombre()
-				+ " y tengo en mi maleta +" + getMaleta()
+				+ " y tengo en mi maleta " + getMaleta()
 				+ " y estoy en la vuelta " + i);
 			
 				Thread t = Thread.currentThread();
@@ -64,7 +63,7 @@ public class CocheConMaleteroRunnable extends CocheConMaletero implements Runnab
 	@Override
 	public String toString() {
 		StringBuilder st = new StringBuilder("\nN " + getNombre());
-		// st.append( "\nI " + getId() ) ;
+		st.append( "\nM " + getMaleta() ) ;
 		//st.append( "\nS " + getState() );
 		//st.append( "\nP " + getPriority() );
 		//st.append( "\nG " + getThreadGroup() );

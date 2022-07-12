@@ -1,6 +1,7 @@
 package carrerasdecoches.apoyo;
 
 public abstract class CocheConMaletero  {
+
 	private Maleta maleta;
 	
 	public Maleta getMaleta() {

@@ -15,6 +15,12 @@ public abstract class Maleta {
 	public void setContenido(String contenido) {
 		this.contenido = contenido;
 	}
-	
 
+	@Override
+	public String toString() {
+		return "Maleta [contenido=" + contenido + "]";
+	}
+	
+	
+	
 }
