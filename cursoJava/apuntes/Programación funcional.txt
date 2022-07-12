@@ -1,1 +1,196 @@
 Programación funcional en JAVA
+
+
+
+POO(programación orientada a objetos)
+
+- Programación IMPERATIVA -> Cómo
+
+- abstracción
+- encapsulamiento
+- modularidad
+- jeraquía
+
+Clases están relacionadas mediante:
+- herencia
+- composición
+- agregación
+- asociación
+
+Unidad de trabajo: Clases y los Objetos
+
+
+
+Objetos tiene estado: los atributos
+
+vs PF(programación funcional)
+
+- Programación DECLARATIVA: ¿Qué?
+
+Basada en Funciones: funciones Lambda
+
+Sin estado, sin orden y sin efectos colaterales
+
+
+Unidad de trabajo: Función
+
+
+----------------------------------------------------------------------------------
+
+Función Lambda
+
+
+Función anónima
+
+- Pepe Perez
+- item -> item + 1
+- System.out::println
+
+
+
+
+
+Partes de una función LAMBDA:
+
+PARAMETROS:
+
+Único argumento:	* item					calcular( item )
+decir el tipo:		* (String nombre )		calcular( String nombre )
+varios argumentos:	* (nombre, edad)		calcular( String nombre, int edad )
+ningún argumento:	* ()					calcular()
+
+
+FLECHA (arrow) "->"
+
+CUERPO body):
+
+Si es un método de una clase (static)		Class::method (i->)
+Si el método es de un objeto				object::method (i->)
+Usamos una única expresión					expresion (return)
+Usamos varias líneas						{expresion1; return expresion2;}
+
+
+Modos de trabajo para las expresiones LAMBDA
+
+Modo de consumidor. Va consumiento cada entrada que se le ponga. No devuelve nada
+Consumidor<T> accept(T)
+System.out::println( item-> )
+
+Modo de Función: se pasa uno (o más parámetros) y se devuelve un resultado 
+Funcion<T,R> apply(T):R
+item -> item + 1
+
+Modo predicado: se pasa un parámetro y se devuelve verdadero/falso
+Predicado<T> test(T):boolean
+item -> item>0
+
+Productor (supplier): genera un dato
+Supplier<T> get():T
+()->"..."
+
+.......
+
+Tiene en cuenta el elemento en curso y el anterior
+
+BiConsumer<T,U,R> accept(T,U)
+System.out.println( msg1 + "," + msg2 )
+
+BiFunction<T,U,R> apply(T,U):R
+(x,y) -> x+y
+
+BiPredicado>T,U,R> test(T,U):boolean
+String::equals
+
+----------------------------------------------------------------------------
+
+Collection y Stream
+
+Collection [ a, b, c ... ]
+
+
+Programación clásica:
+
+-	gestión del bucle
+-	método de transformación
+-	paralelismo
+
+-	¿ se puede reutilizar el código ?
+
+
+Stream:
+
+- Stream in => van entrando los elementos
+
+del "in" pasa al "out": como una cinta transportadora / una tubería / un PIPE
+
+- Stream out
+
+
+entre ellos PUEDES poner
+- una* función de transformación* ( o filtro, o procesamiento, o ....) (una detrás de otra)
+- paralelismo: .parallel()
+
+
+---------------------------------------------------------
+
+Crear (conseguir tener un stream)
+
+
+para un objeto dado:
+list.stream()
+
+Con CLASES:
+
+IntStream.range();
+Stream.of("1","2",,...);
+Stream.generate();
+Stream.iterate();
+
+
+
+Coleccionar (conseguir sacar las cosas del stream)
+
+.collect( Collectors.toList() )
+.toArray( Integer::new )
+
+nos devuelve: [a, b, c]
+
+---------------------------------------------------
+
+Filtrado
+
+.filter( Predicate )
+.skip( long )
+.limit( long )
+
+
+.distinct()
+.peek() // debug
+
+
+----------------------------------------------------
+
+Transform
+
+.map( Function )
+.sorted( Comparator );
+.mapToInt( ... );
+
+
+.mapFlat( Function )
+
+--------------------------------------------
+
+Terminales
+
+.reduce( ... )		Double::sum / Double::max // Double::min // ini, Bifun
+.forEach():void
+
+.findFirst( Predicate )
+.anyMatch( Predicate )
+.noneMatch( Predicate )
+.allMatch( Predicate )
+
+
+
+

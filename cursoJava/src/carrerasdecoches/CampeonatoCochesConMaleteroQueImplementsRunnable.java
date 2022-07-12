@@ -1,6 +1,8 @@
 package carrerasdecoches;
 
 import java.util.*;
+import java.util.function.Predicate;
+import java.util.stream.IntStream;
 
 import carrerasdecoches.apoyo.*;
 
@@ -31,12 +33,19 @@ public class CampeonatoCochesConMaleteroQueImplementsRunnable {
 		
 		listaHilos = dameLosHilosDeLaCarrera( parrilla );
 		
+		System.out.println ( "Tengo " + parrilla.stream().count() + " coches en la parilla" );
 
 		long tInicial = System.currentTimeMillis();
 		
 		arrancar( listaHilos );
 		
-
+		parrilla.stream().filter( new Predicate<CocheConMaleteroRunnable>() {
+			public boolean test(CocheConMaleteroRunnable c) {
+				return false;
+				
+			};
+		}).count();
+		
 		
 		pintar(parrilla);
 		
