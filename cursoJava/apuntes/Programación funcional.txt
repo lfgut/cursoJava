@@ -23,7 +23,8 @@ Unidad de trabajo: Clases y los Objetos
 
 Objetos tiene estado: los atributos
 
-vs PF(programación funcional)
+
+vs PF(PROGRAMACION FUNCIONAL)
 
 - Programación DECLARATIVA: ¿Qué?
 
@@ -45,7 +46,6 @@ Función anónima
 - Pepe Perez
 - item -> item + 1
 - System.out::println
-
 
 
 

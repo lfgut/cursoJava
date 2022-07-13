@@ -4,6 +4,22 @@ package libreta;
 //  Hazlo a través de una subclase
 public abstract class Persona extends Object {
 
+	
+	//		para poder comparar adecuadamente las personas
+	@Override
+	public boolean equals(Object obj) {
+		boolean resultado = false;
+		if (obj instanceof Persona) {
+			Persona p = (Persona) obj;
+			if (
+				getNombre().equalsIgnoreCase(p.getNombre()) &&
+				getApellido().equalsIgnoreCase( p.getApellido() ) &&
+				getEdad() == p.getEdad() 
+			) resultado = true;
+		}
+		return resultado;
+	}
+
 	protected String nombre;
 	protected String apellido;
 	protected String profesion;
@@ -75,4 +91,7 @@ public abstract class Persona extends Object {
 				+ salto+"ciudad   : " + getCiudad();
 	}
 
+	
+	
+	
 }
