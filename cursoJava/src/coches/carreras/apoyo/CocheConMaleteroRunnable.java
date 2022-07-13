@@ -1,4 +1,4 @@
-package carrerasdecoches.apoyo;
+package coches.carreras.apoyo;
 
 import java.util.Random;
 

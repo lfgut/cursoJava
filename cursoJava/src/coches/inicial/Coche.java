@@ -1,4 +1,4 @@
-package coches;
+package coches.inicial;
 
 public class Coche {
 

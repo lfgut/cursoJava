@@ -1,4 +1,4 @@
-package carrerasdecoches;
+package coches.carreras.poo;
 
 public class CampeonatoThreads {
 

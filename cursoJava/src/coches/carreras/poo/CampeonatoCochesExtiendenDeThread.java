@@ -1,8 +1,8 @@
-package carrerasdecoches;
+package coches.carreras.poo;
 
 import java.util.*;
 
-import carrerasdecoches.apoyo.*;
+import coches.carreras.apoyo.*;
 
 public class CampeonatoCochesExtiendenDeThread {
 

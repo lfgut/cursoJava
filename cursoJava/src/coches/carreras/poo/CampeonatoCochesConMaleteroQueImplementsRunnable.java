@@ -1,10 +1,10 @@
-package carrerasdecoches;
+package coches.carreras.poo;
 
 import java.util.*;
 import java.util.function.Predicate;
 import java.util.stream.IntStream;
 
-import carrerasdecoches.apoyo.*;
+import coches.carreras.apoyo.*;
 
 public class CampeonatoCochesConMaleteroQueImplementsRunnable {
 
