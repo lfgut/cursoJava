@@ -16,7 +16,13 @@ public class TestearLonja {
 	*/
 		//		crear lo necesario para trabajar
 		Lonja l1 = Lonja.dameAccesoALaUnicaLonjaQueVamosATener();
-	
+
+		Lonja l2 = Lonja.dameAccesoALaUnicaLonjaQueVamosATener();
+		
+		System.out.println( "Son la misma lonja ? " + ( l1 == l2 ) );
+		
+		
+		
 		String vamos ="ggpLVFmL";
 		int momento = 0;
 		

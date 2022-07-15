@@ -22,8 +22,11 @@ public class Lonja implements ILonja, IEstarSucia, IPesable{
 	
 
 	public static Lonja dameAccesoALaUnicaLonjaQueVamosATener() {
+		return ( lonja == null  ? lonja = new Lonja() : lonja );
+		/*
 		if (lonja == null ) lonja = new Lonja();
 		return lonja;
+		*/
 	}
 
 	private Lonja() {

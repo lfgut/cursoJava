@@ -1,4 +1,4 @@
-package funcional;
+package funcional.apoyo;
 
 import libreta.Persona;
 
