@@ -6,7 +6,9 @@ import lonjaApp.especificaciones.*;
 
 public class Lonja implements ILonja, IEstarSucia, IPesable{
 
-	
+	//	Vamos a crea la lonja con un Singleton -> solo puede haber una lonja
+	//  Usamos la instanciación "lazy":
+	//		no se instancia al cargar la clase, si no cuando se necesita, bajo demanda
 	private static Lonja lonja;
 	
 	List<ICajaRefrigerados> cajas =

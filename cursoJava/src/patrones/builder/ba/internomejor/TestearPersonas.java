@@ -1,4 +1,4 @@
-package patrones.builder.internomejor;
+package patrones.builder.ba.internomejor;
 
 public class TestearPersonas {
 

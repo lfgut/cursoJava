@@ -1,4 +1,4 @@
-package patrones.builder.interna;
+package patrones.builder.bb.interna;
 
 public class PersonaBuilder {
 

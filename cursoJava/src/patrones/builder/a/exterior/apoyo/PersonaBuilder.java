@@ -1,4 +1,4 @@
-package patrones.builder.exterior.apoyo;
+package patrones.builder.a.exterior.apoyo;
 
 public class PersonaBuilder {
 

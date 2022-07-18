@@ -6,3 +6,8 @@ https://www.programaenlinea.net/cambiar-idioma-eclipse-espanol-primera-parte/#:~
 Sobre clases anónimas
 
 https://es.stackoverflow.com/questions/42911/cu%C3%A1l-es-el-prop%C3%B3sito-de-las-clases-an%C3%B3nimas-en-java
+
+
+Git para control de rendimiento de aplicaciones con APM -> ELK
+https://github.com/elastic/apm-integration-testing
+

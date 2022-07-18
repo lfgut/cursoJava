@@ -1,6 +1,6 @@
-package patrones.builder.exterior;
+package patrones.builder.a.exterior;
 
-import patrones.builder.exterior.apoyo.*;
+import patrones.builder.a.exterior.apoyo.*;
 
 public class TestearPersonasInternas {
 

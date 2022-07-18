@@ -1,4 +1,4 @@
-package patrones.builder.exterior.apoyo;
+package patrones.builder.a.exterior.apoyo;
 
 public class Persona {
 
@@ -10,7 +10,12 @@ public class Persona {
 	
 	public static String salto = "\n\t";
 
-	 
+	/*	modificadores de más a menos restringido
+	 *  private
+	 *  -------- > NOPONER NADA
+	 *  protected
+	 *  public
+	 */
 	Persona() {
 		super();
 	}
