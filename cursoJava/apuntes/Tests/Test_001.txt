@@ -1,0 +1,194 @@
+1. ¿Qué modificadores se asumen para todas las variables declaradas en una interface? (Elige 3)
+Seleccione las repuestas adecuadas
+
+public		*
+protected
+private
+static		*
+final		*
+abstract
+
+
+2. ¿Cuál es el resultado del siguiente código?
+
+1: public abstract class Bird {
+2:    public void fly() { System.out.println("Pájaro volando"); }
+3:    public static void main(String[] args) {
+4:      Bird bird = new Pelican();
+5:      bird.fly();
+6:   }
+7: }
+8: class Pelican extends Bird {
+9:   private void fly() { System.out.println("Pelícano volando"); }
+10: }
+ 
+Seleccione la respuesta adecuada
+
+Pájaro volando
+Pelícano volando
+El código no compilará debido a la línea 9.		*
+El código no compilará debido a la línea 5.
+El código no compilará debido a la línea 4.
+
+
+3. Dado el siguiente código de Java, qué valor se muestra en pantalla:
+
+1 public class Programa {
+2    public static void main(String[] args) {
+3      double peso = 65.03F;
+4      float metros = 8.14F;
+5      long numero = (long)peso;
+6      char metro = (char)numero;
+7      int valor = (int)metros;
+8      System.out.println(valor);
+9    }
+10 }
+
+Seleccione la respuesta adecuada
+
+Error de sintáxis, línea 5
+8								*
+Error de sintáxis, línea 3
+Error de sintáxis, línea 7
+68
+Error de sintáxis, línea 6
+
+
+4. ¿Cuáles de los siguientes operadores Java son operadores booleanos? (Elige 3)
+Seleccione las repuestas adecuadas
+
+==		*
++
+--
+!		*
+%
+<=		*
+
+
+5. ¿Cuál es la salida del siguiente trozo de código?
+
+3:List<Integer> lista = new ArrayList<Integer>();
+4: lista.add(10);
+5: lista.add(14);
+6: for(int x : lista) {
+7:     System.out.print(x + ", ");
+8:     break;
+9: }
+
+Seleccione la respuesta adecuada
+
+10, 14,
+10, 14
+10,											*
+El código no compilará debido a la línea 7.
+El código no compilará debido a la línea 8.
+El código contiene un bucle infinito y no termina nunca.
+
+
+6. Dado el siguiente código Java, qué se muestra en pantalla:
+
+public class Programa {
+   public static void main(String[] arg) {
+      String texto = "Un codigo del programa de Java";
+      texto = texto.toLowerCase();
+      int posicion = texto.indexOf("Ja");
+      String otra = ((posicion > 0) ? texto.substring(posicion) : "");
+      otra += "Programa Java";
+      if (!otra.endsWith("Java")) {
+         otra += "Un codigo" + otra;
+      } else {
+         posicion += ((posicion < 1) ? 10 : 11);
+         otra = otra.substring(posicion);
+      }
+      System.out.println(otra);
+   }
+}
+ 
+Seleccione la respuesta adecuada
+
+Error de ejecución.
+ava
+Java						*
+No se muestra nada
+
+
+7. ¿Cuál es el resultado del siguiente programa?
+
+1: public class Squares {
+2:      public static long square(int x) {
+3:          long y = x * (long) x;
+4:          x = -1;
+5:          return y;
+6:      }
+7:     public static void main(String[] args) {
+8:         int value = 9;
+9:         long result = square(value);
+10:       System.out.println(result);
+11:   }
+12:}
+ 
+Seleccione la respuesta adecuada
+
+-1
+9
+81									**
+Error de compilación en línea 9.
+Error de compilación en línea 3.
+
+
+8. Dado:
+
+1.public class X {
+2.      public static void main(String [] args) {
+3.         try {
+4.             badMethod();
+5.            System.out.print(“A”);
+6.         }
+7.         catch (Exception ex) {
+8.             System.out.print(“B”);
+9.         }
+10.      finally {
+11.         System.out.print(“C”);
+12.      }
+13.      System.out.print(“D”);
+14.    }
+15.    public static void badMethod() {
+16.       throw new Error();
+17.    }
+18.}
+
+Seleccione la respuesta adecuada
+
+ABCD
+La compilación falla.
+Se visualiza C antes de salir un mensaje de error.		*
+Se visualiza BC antes de salir un mensaje de error.
+Se visualiza BCD antes de salir un mensaje de error.
+
+
+9. Indica cuáles son las propiedades de un Constructor (Elige 3)
+Seleccione las repuestas adecuadas
+
+Es un tipo de método										**
+Devuelve un tipo de valor
+Tiene el mismo nombre que la clase que lo contiene			**
+No tiene parámetros de entrada
+No se especifica el tipo a devolver							**
+No puede tener el mismo nombre que la clase que lo contiene
+
+
+10. ¿Qué excepción se lanzará?
+
+Object obj = new Integer(3);
+Integer num = (Integer) obj;
+System.out.println(num);
+ 
+Seleccione la respuesta adecuada
+
+ArrayIndexOutOfBoundsException
+ClassCastException
+IllegalArgumentException
+NumberFormatException
+Ninguna de las anteriores			**
+
+
