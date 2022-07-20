@@ -62,7 +62,7 @@ ningún argumento:	* ()					calcular()
 
 FLECHA (arrow) "->"
 
-CUERPO body):
+CUERPO body:
 
 Si es un método de una clase (static)		Class::method (i->)
 Si el método es de un objeto				object::method (i->)
@@ -194,8 +194,18 @@ Terminales
 
 -------------------------------------------------------
 
+En general podemos decir que una lambda es:
+
+o el único método de una interface/clase
+o uno de los métodos de una interface/clase (hay que identificar cuál)
 
 
+-----------------------------------------------------------
+La programación funcional se basa en la utilización de
+funciones de ORDEN SUPERIOR:
+
+- son funciones de la misma categoría que el resto del lenguaje
+- no están emuladas de ninguna manera
 
 
 

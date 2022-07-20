@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 import libreta.Persona;
 
-public class LambdaApp {
+public class LambdaApp implements Comparable<LambdaApp>, Comparator<LambdaApp>{
 	
 	
 	
@@ -150,8 +150,8 @@ public class LambdaApp {
 						(o1, o2) -> Integer.compare( o1.getEdad(), o2.getEdad() ) 
 					)
 				.parallel()
-				.collect( Collectors.toList());
-		
+				.collect( Collectors.toList());		
+				
 		
 		//System.out.println( lista );
 		
@@ -177,6 +177,18 @@ public class LambdaApp {
 		new LambdaApp().ordenar();
 		
 		
+	}
+
+	@Override
+	public int compare(LambdaApp o1, LambdaApp o2) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int compareTo(LambdaApp o) {
+		// TODO Auto-generated method stub
+		return 0;
 	}
 
 }

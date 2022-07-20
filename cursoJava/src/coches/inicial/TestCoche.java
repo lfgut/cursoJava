@@ -1,7 +1,5 @@
 package coches.inicial;
 
-import lonjaApp.apoyo.CajaMerluza;
-
 public class TestCoche {
 
 	public static void main(String[] args) {
@@ -63,7 +61,21 @@ public class TestCoche {
 		// NO es modificable porque es final
 		// ILavable.texto = "Otra cosa";
 		
+		/*
+		c1.cuantosCochesHemosFabricado++;
+		c2.cuantosCochesHemosFabricado++;
+		Coche.cuantosCochesHemosFabricado++;
+		*/
 		
+		System.out.println("Hemos creado c1 " + c1.cuantosCochesHemosFabricado );
+		
+		System.out.println("Hemos creado c2 " + c2.cuantosCochesHemosFabricado );
+		
+		System.out.println("Total de coches "+ 	Coche.cuantosCochesHemosFabricado );
+		
+		c1 = null;
+		
+		System.out.println(c1);
 		
 	}
 	
