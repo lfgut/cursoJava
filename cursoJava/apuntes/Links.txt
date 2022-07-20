@@ -11,3 +11,8 @@ https://es.stackoverflow.com/questions/42911/cu%C3%A1l-es-el-prop%C3%B3sito-de-l
 Git para control de rendimiento de aplicaciones con APM -> ELK
 https://github.com/elastic/apm-integration-testing
 
+
+Grafos:
+
+https://www.baeldung.com/java-graphs
+
