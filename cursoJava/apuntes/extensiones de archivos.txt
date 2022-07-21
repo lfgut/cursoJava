@@ -1,0 +1,25 @@
+Tipos de ficheros en java
+
+código fuente, texto plano:
+.java
+
+compilado, ByteCodes:
+.class
+
+Ficheros que sirven para tenerlo todo junto,
+y que PODRIAN estar comrpimidos en formato zip:
+
+java - archive (archivos de java):
+.jar
+
+web - archive:
+.war
+
+resursos - archive:
+cualquier fichero que queramos llevar de un lugar a otro ( .png, jpgs, xml, mp3, avi, .. )
+.rar ( no confundir con la extensión de winrar !!!)
+
+archivos de aplicaciones corporativas, para desplegar en servidores de aplicaciones:
+enterprise archive
+.ear
+

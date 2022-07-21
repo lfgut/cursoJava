@@ -1,0 +1,125 @@
+Bases de datos
+
+Tienen un "servicio" que es al que pedimos los datos y
+es quien los busca por nosotros.
+
+Por debajo tienen unas estructuras (datafiles / tablespaces/
+esquemas/ ... ) para poder hacer ampliaciones y que no se noten.
+
+Esto es lo que conocemos como "Motor de Base de Datos" o SGBDR.
+
+Por ejemplo:
+- oracle
+- IBM DB2
+- Microsoft MS-SQL Server
+
+- MySQL
+- MariaDB
+- PostgreSQL
+
+El lenguaje para gestionar las bases de datos (BBDD):
+
+SQL -> lenguaje estructurado de consultas
+
+-> DDL: lenguaje para crear estructuras: tablas, indices ....
+-> DML: lenguaje de manejo de datos: insertar, borrar, consultar, modificar
+	(CRUD) crear, consultar, actualizar, borrar
+	
+        crear   consultar cambiar borrar
+Tablas  CREATE SELECT     ALTER   DROP/TRUNCATE
+Datos   INSERT SELECT     UPDATE  DELETE                <----------------------
+
+Las aplicaciones están, habitualmente, enfocadas a un uso transaccional:
+
+insertar nueva información o actualizar la existente.
+
+
+
+Hay unas BBDD que están enfocadas a consultas, que han de ser lo más rápidas posibles:
+
+Tablas de "hechos" (Fact), tablas de dimensiones (DIM)
+Están ABSOLUTAMENTE desnormalizadas
+
+BI / reports /
+DataWarehouses / DataMarts ...
+
+BI -> busqueda de información entre muchos datos (data mining) "minería de datos"
+-> Machine learning
+
+
+Cuando empezamos a intentar extraer información de datos que provienen de muchos sitios:
+
+-> Big Data
+
+Los datos no siempre están estructurados como en las BBDD tradiconales:
+
+bases de datos NoSQL:
+- elasticsearch
+- hadoop
+
+------------------------------------
+
+Qué necsitamos:
+
+Un motor de BBDD (mysql)
+Un conector (driver) para ponerselo al proyecto y que podamos acceder desde Java
+Configurar el driver en Eclipse
+Crear la Cadena de conexión
+Usarla
+
+---------------------------------------------
+
+Java tiene una serie de APIs para manejar los datos de las BBDD:
+API JDBC (Java DataBase Conectivity)
+
+API:
+ -Interface de Programación de Aplicaciones:
+ 	-> Métodos de las interfaces que podemos usar desde nuestro sistema
+ 	
+Qué hace el driver: implementa las interfaces que dice Java
+Esto lo desarrolla la base de datos
+
+
+Cuando no hay driver específico para tu BBDD, pero tienes driver ODBC:
+(Open DataBase Conectivity) (empezó en Windows per ya funciona en muchos más SO)
+-> existe un driver JDBC-ODBC driver genérico.
+
+-------------------------------------------------------
+
+Consultas típicas:
+
+SELECT campo1, campo2, campo3
+	FROM tabla1, t2, t3 ...
+		JOIN (outer: "left, right, full", inner ...)
+			WHERE "condicion boolean de cada registro"
+			
+				GROUP BY "condición de agrupación de datos"
+					HAVING "condición boolean del grupo de datos"
+
+
+CAMPO-> cada dato compatible: nombre, dirección. ...
+TABLA-> datos que tienen que ver entre sí: datos de cliente, de producto ...
+
+funciones: SUM, MIN, MAX, AVG, COUNT
+
+	
+-----------------------------
+
+Descargando el driver:
+
+https://dev.mysql.com/downloads/connector/j/
+
+Nos descargamos el independiente de la plataforma:
+
+mysql-connector-java-8.0.29.zip
+
+y lo descomprimimos
+
+
+
+
+	
+	
+	
+
+
