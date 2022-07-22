@@ -28,3 +28,15 @@ https://rodin.uca.es/bitstream/handle/10498/18602/incorporacion-driver-JDBC-ecli
 
 Streams
 https://javadesdecero.es/avanzado/streams-de-bytes/
+
+
+JavaDesdeCero (texto):
+https://javadesdecero.es/avanzado/
+https://javadesdecero.es/avanzado/streams-de-bytes/
+
+Curso de Java en youtube:
+pildorasinformaticas
+
+Másters en youtube:
+miw upm
+
