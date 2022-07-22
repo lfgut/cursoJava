@@ -1,0 +1,108 @@
+1. Cuál de las siguientes afirmaciones es válida:
+Seleccione la respuesta adecuada
+
+La programación funcional se basa en la inmutabilidad de los datos.
+La programación funcional se basa en el tratamiento de colecciones.
+La programación funcional se basa en la utilización de métodos de orden superior.
+Todas las anteriores afirmaciones son válidas.	***
+
+
+2. ¿Qué es una interface funcional?
+Seleccione la respuesta adecuada
+
+Es aquella interface que contiene dos métodos abstractos.
+Es aquella interface que no contiene métodos.
+Es aquella interface que contiene un único método abstracto.		***
+Es aquella interface que contiene más de un método abstracto.
+
+
+3. Qué método transforma un Stream de un tipo dado a otro Stream de otro tipo:
+Seleccione la respuesta adecuada
+
+filter
+collect
+reduce
+map				***
+distinct
+
+
+4. Dado el siguiente código:
+
+[T] cad = Arrays.asList(“a",”n","t",”b").stream().collect(Collectors.toList());
+
+De qué tipo [T] tiene que ser la variable cad para que el código sea correcto:
+Seleccione la respuesta adecuada
+
+List<char>
+Set<String>
+HashSet<String>
+List<String>		****
+Set<char>
+
+
+5. Dado el siguiente código:
+
+int rdo = Arrays.asList(2,3,4).stream().reduce(0, (a, b) -> a + b);
+System.out.println(rdo);
+
+Cuál es el valor que se muestra en pantalla:
+Seleccione la respuesta adecuada
+
+3
+9		****
+5
+0
+7
+
+
+6. Indica qué formas son correctas para crear threads en Java. (Elige dos)
+Seleccione las repuestas adecuadas
+
+Para que una clase sea un hilo debe heredar de Thread.		***
+No se pueden crear threads.
+Para que una clase sea un hilo debe de implementar la interface Runnable.		***
+No se pueden crear implementaciones de Runnable.
+
+
+7. ¿Qué es UML?
+Seleccione la respuesta adecuada
+
+Es un lenguaje de programación.
+Es un lenguaje de notaciones.
+Es un lenguaje visual de modelado.		***
+Es un lenguaje de signos.
+
+
+8. Dado el siguiente código:
+
+String rdo = Arrays.asList(1,2,3).stream()
+                   .map(x->String.valueOf(x))
+                   .reduce("", (a, b) -> a + b);
+System.out.println(rdo);
+
+Qué se muestra en pantalla:
+Seleccione la respuesta adecuada
+
+Error de compilación
+Una cadena vacía
+6
+123		****
+23
+
+
+9. Qué paquete de Java necesitaremos para trabajar con bases de datos:
+Seleccione la respuesta adecuada
+
+java.io
+java.sql		***
+java.net
+java.nio
+
+
+10. Cuál de las siguientes sentencias SQL realiza una consulta a la base de datos:
+Seleccione la respuesta adecuada
+
+INSERT
+SELECT		****
+DELETE
+UPDATE

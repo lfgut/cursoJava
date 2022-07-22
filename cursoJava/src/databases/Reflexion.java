@@ -5,6 +5,14 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.lang.reflect.*;
 
+/*
+	podemos preguntar a una clase por sus cosas:
+		metodos
+		campos
+			etc
+	reflection -> introspección sobre como es la clase
+*/
+
 public class Reflexion {
 	public static void main(String[] args) {
 		Method[] metodos = null;
